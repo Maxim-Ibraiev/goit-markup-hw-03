@@ -32,16 +32,24 @@ body {
   font-family: Roboto, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1, 71;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 
   color: var(--color-basic);
 }
 
+.container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .title {
   font-size: 36px;
   font-weight: 700;
-  line-height: 1,16;
+  line-height: 1.16;
   text-align: center;
 
   color: var(--color-title);
@@ -53,9 +61,13 @@ body {
 
 .header-title h3 {
   font-size: 14px;
-  line-height: 1, 14;
+  line-height: 1.14;
 
   color: var(--color-title);  
+}
+
+.flex {
+  
 }
 
 .nav-header,
@@ -70,6 +82,7 @@ body {
 
 .space-94     { margin-top:     94px;}
 .space-94-pb  { padding-bottom: 94px;}
+
 /* 
   header
 */
@@ -79,12 +92,10 @@ body {
   font-family: Raleway, Helvetica, sans-serif;
   font-size: 26px;
   font-weight: 700;
-  line-height: 1, 19;
+  line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-
-.nav-header {margin-left: 215px;}
 
 .logo-web     { color: #2196f3;}
 .logo-studio  { color: #000000;}
@@ -102,7 +113,7 @@ body {
 .nav a {
   font-size: 14px;
   font-weight: 500;
-  line-height: 1,14;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
 
@@ -120,7 +131,7 @@ body {
 .nav-address a {
   font-size: 14px;
   font-weight: 500;
-  line-height: 1, 14;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
   
@@ -138,9 +149,7 @@ body {
 }
 
 .nav-address li:not(:last-child) { margin-right: 30px;}
-
-.nav-address li:last-child { margin-right: 215px;}
-
+.nav-address li:last-child { margin-right: 0px;}
 .nav-header { align-items: center;}
 
 /* webstudio section 1*/
@@ -156,7 +165,7 @@ body {
 .header {
   font-size: 44px;
   font-weight: 900;
-  line-height: 1, 36;
+  line-height: 1.36;
 }
 .header-style {
   display: flex;
@@ -165,7 +174,7 @@ body {
 
   font-size: 44px;
   font-weight: 900;
-  line-height: 1, 36;
+  line-height: 1.36;
   letter-spacing: 6%;
   vertical-align: top;
 
@@ -192,7 +201,7 @@ body {
   
   font-size: 16px;
   font-weight: 700;
-  line-height: 1, 87;
+  line-height: 1.87;
   text-decoration: none;
   
   color: #ffffff;
@@ -206,11 +215,15 @@ body {
 .header-title {
   flex-wrap: wrap;
   align-content: center;
-
-  padding-left: 215px;
-  padding-right: 215px;
 }
-.header-title li { width: 270px;}
+
+.header-title li { 
+  width: calc((100% - 90px) / 4);
+}
+
+.header-title li:not(:nth-child(4n))  { margin-right: auto;}
+.header-title li:last-child           { margin-right: 0px;}
+.header-title li:nth-child(n + 5)     { margin-top: 30px;}
 
 .header-title-list {
   flex-direction: column;
@@ -219,7 +232,7 @@ body {
 
 /* header title list */
 .header-title .antenna {
-  width: 270px;
+  width: 100%;
   height: 120px;
 
   background: url(../images/antenna.png), var(--color-background);
@@ -228,7 +241,7 @@ body {
   background-repeat: no-repeat;
 }
 .header-title .clock {
-  width: 270px;
+  width: 100%;
   height: 120px;
 
   background: url(../images/clock.png), var(--color-background);
@@ -237,7 +250,7 @@ body {
   background-repeat: no-repeat;
 }
 .header-title .diagram {
-  width: 270px;
+  width: 100%;
   height: 120px;
 
   background: url(../images/diagram.png), var(--color-background);
@@ -246,7 +259,7 @@ body {
   background-repeat: no-repeat;
 }
 .header-title .astronaut {
-  width: 270px;
+  width: 100%;
   height: 120px;
 
   background: url(../images/astronaut.png), var(--color-background);
@@ -263,19 +276,17 @@ body {
   margin-top: 10px;
   margin-bottom: 0;
 }
-.header-title li:not(:nth-child(4n))  { margin-right: 30px;}
-.header-title li:last-child           { margin-right: 0px;}
 
 .title p {
   font-size: 14px;
-  line-height: 1, 71;
+  line-height: 1.71;
 
   color: var(--color-basic);
 }
 
 .title-white p {
   font-size: 14px;
-  line-height: 1,14;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -288,9 +299,6 @@ body {
 .ind-sec-2 {
   display: flex;
   flex-wrap: wrap;
-
-  padding-right: 215px;
-  padding-left: 215px;
 }
 
 .ind-sec-2 li:not(:nth-child(3n)) { margin-right: 30px;}
@@ -299,10 +307,12 @@ body {
 
 /* index section list */
 .ind-sec-2 .desktop {
-  width: 370px;
+  width: calc((100% - 60px) / 3);
   height: 294px;
 
   background: url(../images/desktop.png);
+  background-repeat: no-repeat;
+
 }
 .desktop {
   display: flex;
@@ -313,7 +323,8 @@ body {
 
 .ind-sec-2 .phone {
   background: url(../images/phone.png);
-  width: 370px;
+  background-repeat: no-repeat;
+  width: calc((100% - 60px) / 3);
   height: 294px;
 }
 .phone {
@@ -325,7 +336,8 @@ body {
 
 .ind-sec-2 .monitor {
   background: url(../images/monitor.png);
-  width: 370px;
+  background-repeat: no-repeat;
+  width: calc((100% - 60px) / 3);
   height: 294px;
 }
 .monitor {
@@ -350,7 +362,7 @@ body {
 
   font-weight: 500;
   font-size: 16px;
-  line-height: 1, 18;
+  line-height: 1.18;
 
   color: var(--color-title);
 }
@@ -359,7 +371,7 @@ body {
   margin-top: 10px;
 
   font-size: 16px;
-  line-height: 1, 18;
+  line-height: 1.18;
   
   color: var(--color-basic);
 }
@@ -372,17 +384,21 @@ body {
 .title-team {
   display: flex;
   flex-wrap: wrap;
-  padding-right: 215px;
-  padding-left: 215px;
+  /* padding-right: 215px;
+  padding-left: 215px; */
 }
-.title-team li:not(:nth-child(4n))  { margin-right: 30px;}
+.title-team li:not(:nth-child(4n))  { margin-right: auto;}
 .title-team li:last-child           { margin-right: 0px;}
 .title-team li:nth-child(n + 5)     { margin-top: 50px;}
 
 .social-link { display: flex;}
 
 /* team list */
-.nikolay-kucherenko .photo { background: url(../images/nikolay-kucherenko.png);}
+.nikolay-kucherenko .photo  { background: url(../images/nikolay-kucherenko.png);}
+.olga-ivanova       .photo  { background: url(../images/olga-ivanova.png);}
+.andrey-shevchenko  .photo  { background: url(../images/andrey-shevchenko.png);}
+.ivan-nikolaev      .photo  { background: url(../images/ivan-nikolaev.png);}
+
 .description {
   display: flex;
   flex-direction: column;
@@ -393,62 +409,23 @@ body {
   height: 162px;
   border-radius: 0px 0px 4px 4px;
 }
+
 .nikolay-kucherenko {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.olga-ivanova .photo { background: url(../images/olga-ivanova.png);}
-
-.description {
-  width: 270px;
-  height: 162px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  border-radius: 0px 0px 4px 4px;
-  background-color: var(--color-white);
-}
 .olga-ivanova {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.andrey-shevchenko .photo { background: url(../images/andrey-shevchenko.png);}
-
-.description {
-  width: 270px;
-  height: 162px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  background-color: var(--color-white);
-  border-radius: 0px 0px 4px 4px;
-}
 .andrey-shevchenko {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.ivan-nikolaev .photo { background: url(../images/ivan-nikolaev.png);}
-
-.description {
-  width: 270px;
-  height: 162px;
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  background-color: var(--color-white);
-  border-radius: 0px 0px 4px 4px;
 }
 
 .ivan-nikolaev {
@@ -467,19 +444,15 @@ body {
   justify-content: center;
 
   margin-top: 50px;
-  padding-left: 214px;
-  padding-right: 214px;
 }
 
-.our-customs li:not(:nth-child(6n)) { margin-right: 30px;}
+.our-customs li:not(:nth-child(6n)) { margin-right: calc((100% - 1020px) / 5);}
 .our-customs li:last-child          { margin-right: 0px;}
 .our-customs li:nth-child(n + 7)    { margin-top: 50px;}
 
 /* footer */
 
 .footer {
-  padding-left: 215px;
-  padding-right: 215px;
   padding-top: 85px;
 
   background-color: var(--color-footer-background);
@@ -503,7 +476,7 @@ body {
   font-weight: normal;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1, 71;
+  line-height: 1.71;
   text-decoration-style: normal;
   
   color: var(--color-footer-address);
@@ -521,7 +494,7 @@ body {
   display: block;
 
   font-size: 14px;
-  line-height: 1, 71;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
   text-decoration-style: unset;
@@ -536,7 +509,7 @@ body {
 .footer-title-link {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1,14;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -576,9 +549,6 @@ body {
   justify-content: center;
 }
 
-.nav-portfolio-list a {
-}
-
 .nav-portfolio li             { margin-right: 8px;}
 .nav-portfolio li:last-child  { margin-right: 0px;}
 
@@ -587,7 +557,7 @@ body {
   
   font-size: 16px;
   font-weight: 500;
-  line-height: 1, 62;
+  line-height: 1.62;
   text-decoration: none;
   
   color: var(--color-title);
@@ -606,16 +576,14 @@ body {
 .basic-portfolio {
   display: flex;
   flex-wrap: wrap;
-
-  padding-right: 215px;
-  padding-left: 215px;
+  
   margin-top: 62px;
   margin-bottom: 94px;
 }
 
-.basic-portfolio li:not(:nth-child(3n)) { margin-right: 30px;}
+.basic-portfolio li:not(:nth-child(3n)) { margin-right: calc((100% - 1110px) / 2);}
 .basic-portfolio li:last-child          { margin-right: 0px;}
-.basic-portfolio li                     { margin-top: 30px;}
+.basic-portfolio li:nth-child(n + 4)    { margin-top: 30px;}
 
 .basic-portfolio a {
   text-decoration: none;
@@ -636,7 +604,7 @@ body {
   padding-left: 24px;
 
   font-size: 16px;
-  line-height: 1, 71;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   
   color: var(--color-basic);
