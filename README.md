@@ -1,3 +1,3 @@
-# goit-markup-hw-02
-homework-2
-https://maxim-ibraiev.github.io/goit-markup-hw-02/index.html
+# goit-markup-hw-03
+homework-3
+https://maxim-ibraiev.github.io/goit-markup-hw-03/
